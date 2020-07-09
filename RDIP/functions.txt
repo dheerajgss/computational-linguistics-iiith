@@ -1,0 +1,8 @@
+Functionalities of experiment page:
+
+1)We have an option called "Select language" which has two options, English and Hindi.
+2)On selecting a language, we get words from a sentence as buttons which are random in order.
+3)As we start selecting the buttons, a button named "Re-form the sentence" will appear and the content of the selected buttons will be printed above the "Re-form" button.
+4)After we select all the buttons, "Check correctness of the sentence" button will be enabled.
+5)If "Check" button is clicked, it will validate the sentence and return whether it is Right or Wrong Answer.
+6)If Wrong answer is displayed, another button "Get correct sentence" will be displayed, showing the correct sentences from the random words.
