@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+    <div class="first-block">
+        <p id="head">Forming Sentences - 2</p>
+        <div class="second-block">
+            <p id="exp">Experiment</p>
+            <div class="drop-down">
+                <select name="languageSelect" id="languageSelect">
+                    <option value="select-name">---Select a language---</option>
+                    <option value="english" onclick="englishSen()">English</option>
+                    <option value="hindi" onclick="hindiSen()">Hindi</option>
+                </select>
+            </div>
+            
+            <div class="sentence">
+                <p id="sentence-info"></p>
+                <p id="sentence-info2" style="font-weight: 500;"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

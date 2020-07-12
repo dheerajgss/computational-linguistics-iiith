@@ -1,0 +1,45 @@
+body {
+    background-color: #012943;
+}
+
+.first-block {
+    background-color: rgb(227, 242, 252);
+    height: max-content;
+    margin: 30px 250px;
+    
+}
+
+.first-block #head {
+    font-size: 40px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.second-block {
+    background-color: white;
+    margin-top: 0px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-bottom: 50px;
+    height: 520px;
+    box-shadow: 3px 10px 12px 10px #888888;
+}
+
+.second-block #exp {
+    font-size: 30px;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+
+.drop-down {
+    text-align: center;
+}
+
+.sentence {
+    color: blue;
+    font-weight: 600;
+    font-size: larger;
+    margin-top: 40px;
+    padding-top: 10px;
+    text-align: center;
+}
