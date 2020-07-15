@@ -22,13 +22,85 @@ var hindi = [
 ]
 
 
+var senstoreEng;
+var wordstoreEng;
 function englishSen() {
 
     document.getElementById("sentence-info").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words <br>";
     document.getElementById("sentence-info2").innerHTML = "(<i>select the buttons in proper order</i>)";
+    document.getElementById("btn-display").innerHTML = "";
+    
+    function englishBtn() {
+        var fstChoice = english[Math.floor(Math.random() * 10)];
+        senstoreEng = fstChoice;
+        var scndChoice = fstChoice[Math.floor(Math.random() * fstChoice.length)];
+        wordstoreEng = scndChoice.split(" ");
+
+        var len = wordstoreEng.length;
+        var temp, index;
+        while(len > 0) 
+        {
+            index = Math.floor(Math.random() * len);
+            len--;
+            temp = wordstoreEng[len]
+            wordstoreEng[len] = wordstoreEng[index];
+            wordstoreEng[index] = temp;
+        }
+
+        function btnCreateEng()
+        {
+            for(var i = 0; i < wordstoreEng.length; i++)
+            {
+                var btn = document.createElement('button');
+                btn.innerHTML = wordstoreEng[i];
+                document.getElementById("btn-display").appendChild(btn);
+
+            }
+        }
+        btnCreateEng();
+        
+    }
+    englishBtn();
 }
+
+var senstoreHin;
+var wordstoreHin;
 
 function hindiSen() {
     document.getElementById("sentence-info").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words <br>";
     document.getElementById("sentence-info2").innerHTML = "(<i>select the buttons in proper order</i>)";
+    document.getElementById("btn-display").innerHTML = "";
+
+    function hindiBtn() {
+        var fstChoice = hindi[Math.floor(Math.random() * 7)];
+        senstoreHin = fstChoice;
+        var scndChoice = fstChoice[Math.floor(Math.random() * fstChoice.length)];
+        wordstoreHin = scndChoice.split(" ");
+
+        var len = wordstoreHin.length;
+        var temp, index;
+        while(len > 0) 
+        {
+            index = Math.floor(Math.random() * len);
+            len--;
+            temp = wordstoreHin[len]
+            wordstoreHin[len] = wordstoreHin[index];
+            wordstoreHin[index] = temp;
+        }
+
+        function btnCreateHin()
+        {
+            for(var i = 0; i < wordstoreHin.length; i++)
+            {
+                var btn = document.createElement('button');
+                btn.innerHTML = wordstoreHin[i];
+                document.getElementById("btn-display").appendChild(btn);
+
+            }
+        }
+        btnCreateHin();
+        
+    }
+    hindiBtn();
+    
 }

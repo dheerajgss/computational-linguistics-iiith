@@ -43,3 +43,7 @@ body {
     padding-top: 10px;
     text-align: center;
 }
+
+button {
+    margin-left: 10px;
+}
