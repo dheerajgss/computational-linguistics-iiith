@@ -24,7 +24,11 @@ var hindi = [
 
 var senstore;
 var wordstore;
+var engSel = 0;
+var hinSel = 0;
 function englishSen() {
+    engSel = 1;
+    hinSel = 0;
 
     document.getElementById("sentence-info").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words <br>";
     document.getElementById("sentence-info2").innerHTML = "(<i>select the buttons in proper order</i>)";
@@ -54,6 +58,9 @@ function englishSen() {
 
 
 function hindiSen() {
+    hinSel = 1;
+    engSel = 0;
+
     document.getElementById("sentence-info").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words <br>";
     document.getElementById("sentence-info2").innerHTML = "(<i>select the buttons in proper order</i>)";
 
@@ -101,8 +108,13 @@ function btnCreate() {
             if(num == 1){
                 document.getElementById("re-form").style.visibility = "visible";
             }
-                    
+            if(num == wordstore.length) {
+                document.getElementById("correct-ness").style.visibility = "visible";
+            }      
         });
 
     }
+    
 }
+
+
