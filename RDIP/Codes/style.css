@@ -5,7 +5,9 @@ body {
 .first-block {
     background-color: rgb(227, 242, 252);
     height: max-content;
-    margin: 30px 250px;
+    margin-top: 30px;
+    margin-left: 250px;
+    margin-right: 250px;
     
 }
 
@@ -21,7 +23,7 @@ body {
     margin-left: 25px;
     margin-right: 25px;
     padding-bottom: 50px;
-    height: 520px;
+    height: 534px;
     box-shadow: 3px 10px 12px 10px #888888;
 }
 
@@ -46,4 +48,19 @@ body {
 
 button {
     margin-left: 10px;
+}
+
+.checking {
+    text-align: center;
+}
+
+#sentence-info3 {
+    padding-top: 10px;
+    color: blue;
+    font-size: larger;
+}
+
+#main-sentence {
+    font-weight: 600;
+    font-size: xx-large;
 }
