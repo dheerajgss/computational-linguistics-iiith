@@ -90,6 +90,7 @@ function hindiSen() {
 function btnCreate() {
     document.getElementById("btn-display").innerHTML = "";
     document.getElementById("sentence-info3").innerHTML = "";
+    document.getElementById("counting").innerHTML = "";
     document.getElementById("main-sentence").innerHTML = "";
     document.getElementById("re-form").style.visibility = "hidden";
     document.getElementById("correct-ness").style.visibility = "hidden";
@@ -109,6 +110,7 @@ function btnCreate() {
             document.getElementById("main-sentence").innerHTML += this.innerHTML + " ";
             this.style.display = "none";
             num += 1;
+            document.getElementById("counting").innerHTML = "<i>Total buttons clicked: " + num + "</i>";
             if(num == 1){
                 document.getElementById("re-form").style.visibility = "visible";
             }
