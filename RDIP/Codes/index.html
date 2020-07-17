@@ -15,7 +15,7 @@
             <p id="exp">Experiment</p>
             <div class="drop-down">
                 <select name="languageSelect" id="languageSelect">
-                    <option value="select-name">---Select a language---</option>
+                    <option value="select-name" onclick="alert('Select language')">---Select a language---</option>
                     <option value="english" onclick="englishSen()">English</option>
                     <option value="hindi" onclick="hindiSen()">Hindi</option>
                 </select>
@@ -34,8 +34,8 @@
                 <button id="re-form" style="visibility: hidden;" onclick="btnCreate()">Reform the sentence</button> <br><br>
                 <button id="correct-ness" style="visibility: hidden;" onclick="correctSen()">Check Correctness of the Sentence</button>
                 <p id="result" style="font-size: xx-large;"></p>
-                <button id="show-ans" style="visibility: hidden;" ontoggle="">Get Correct Sentence</button>
-                <p id="right-ans"></p>
+                <button id="show-ans" style="visibility: hidden;" onclick="showAndHide()">Get Correct Sentence</button>
+                <p id="right-ans" style="padding-top: 20px;font-size: larger;"></p>
             </div>
 
         </div>

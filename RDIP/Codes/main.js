@@ -95,6 +95,8 @@ function btnCreate() {
     document.getElementById("correct-ness").style.visibility = "hidden";
     document.getElementById("result").innerHTML = "";
     document.getElementById("show-ans").style.visibility = "hidden";
+    document.getElementById("show-ans").innerHTML = "Get Correct Sentence";
+    document.getElementById("right-ans").innerHTML = "";
     var num = 0;
     for(var i = 0; i < wordstore.length; i++)
     {
@@ -161,6 +163,22 @@ function correctSen() {
             document.getElementById("result").style.color = "red";
             document.getElementById("show-ans").style.visibility = "visible";
         }
+    }
+}
+
+
+function showAndHide() {
+    var x = document.getElementById("show-ans").innerHTML;
+    if(x == "Get Correct Sentence" || x == "Get Answers") {
+        document.getElementById("show-ans").innerHTML = "Hide the correct Sentence";
+        for (var i = 0; i < senstore.length; i++) {
+            document.getElementById("right-ans").innerHTML += senstore[i] + "<br>";
+        }
+    }
+
+    else {
+        document.getElementById("show-ans").innerHTML = "Get Answers";
+        document.getElementById("right-ans").innerHTML = "";
     }
 }
 
