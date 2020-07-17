@@ -93,6 +93,8 @@ function btnCreate() {
     document.getElementById("main-sentence").innerHTML = "";
     document.getElementById("re-form").style.visibility = "hidden";
     document.getElementById("correct-ness").style.visibility = "hidden";
+    document.getElementById("result").innerHTML = "";
+    document.getElementById("show-ans").style.visibility = "hidden";
     var num = 0;
     for(var i = 0; i < wordstore.length; i++)
     {
@@ -117,4 +119,48 @@ function btnCreate() {
     
 }
 
+function correctSen() {
+    var main = document.getElementById("main-sentence").innerHTML;
+    main = main.split(" ");
+    main.pop();
+    main = main.join(" ");
+    if(engSel) {
+        var flag = 0, x;
+        for(var i = 0; i < senstore.length; i++) {
+            x = main.localeCompare(senstore[i]);
+            if(x == 0){
+                flag = 1;
+                break;
+            }
+        }
+        if(flag) {
+            document.getElementById("result").innerHTML = "Right Answer!!!";
+            document.getElementById("result").style.color = "green";
+        }
+        else {
+            document.getElementById("result").innerHTML = "Wrong Answer!!!";
+            document.getElementById("result").style.color = "red";
+            document.getElementById("show-ans").style.visibility = "visible";
+        }
+    }
+    else {
+        var flag = 0, x;
+        for(var i = 0; i < senstore.length; i++) {
+            x = main.localeCompare(senstore[i]);
+            if(x == 0){
+                flag = 1;
+                break;
+            }
+        }
+        if(flag) {
+            document.getElementById("result").innerHTML = "Right Answer!!!";
+            document.getElementById("result").style.color = "green";
+        }
+        else {
+            document.getElementById("result").innerHTML = "Wrong Answer!!!";
+            document.getElementById("result").style.color = "red";
+            document.getElementById("show-ans").style.visibility = "visible";
+        }
+    }
+}
 
