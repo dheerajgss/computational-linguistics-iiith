@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Experiment</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-
-    
 </head>
 <body>
     <div class="first-block">
@@ -32,10 +31,10 @@
                 <p id="sentence-info3" style="color: blue;"></p>
                 <p id="counting"></p>
                 <p id="main-sentence"></p>
-                <button id="re-form" style="visibility: hidden;" onclick="btnCreate()">Reform the sentence</button> <br><br>
-                <button id="correct-ness" style="visibility: hidden;" onclick="correctSen()">Check Correctness of the Sentence</button>
-                <p id="result" style="font-size: xx-large;"></p>
-                <button id="show-ans" style="visibility: hidden;" onclick="showAndHide()">Get Correct Sentence</button>
+                <button type="button" class="btn btn-info" id="re-form" style="visibility: hidden;" onclick="btnCreate()">Reform the sentence</button> <br><br>
+                <button type="button" class="btn btn-info" id="correct-ness" style="visibility: hidden;" onclick="correctSen()">Check Correctness of the Sentence</button>
+                <p id="result" style="font-size: xx-large; padding: 20px; margin-left: 30px;"></p>
+                <button type="button" class="btn btn-info" id="show-ans" style="visibility: hidden;" onclick="showAndHide()">Get Correct Sentence</button>
                 <p id="right-ans" style="padding-top: 20px;font-size: larger;"></p>
             </div>
 
@@ -43,5 +42,7 @@
     </div>
     
     <script src="main.js"></script>
+
+    
 </body>
 </html>
